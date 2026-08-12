@@ -38,9 +38,9 @@ let products = [
         rating: 4.9,
         tag: "BEST SELLER",
 
-        image: "images/iphone15.jpg",
+        image: "iphone15.jpg",
 
-        video: "videos/iphone-15-pro.mp4",
+        video: "iphone-15-pro.mp4",
 
         description:
             "Smartphone premium dengan performa cepat, kamera tajam, dan desain elegan.",
