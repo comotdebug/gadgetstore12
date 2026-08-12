@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#111827"
+    >
+
+    <title>
+        GadgetStore
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ROLE PAGE
+===================================================== -->
+
+<section
+    id="rolePage"
+    class="screen active role-page"
+>
+
+    <div class="role-wrapper">
+
+        <div class="brand-logo">
+            G
+        </div>
+
+        <p class="eyebrow">
+            PREMIUM DIGITAL STORE
+        </p>
+
+        <h1>
+            GadgetStore
+        </h1>
+
+        <p class="role-description">
+            Belanja gadget favorit atau
+            kelola toko dengan mudah.
+        </p>
+
+
+        <div class="role-list">
+
+            <button
+                class="role-card"
+                onclick="openCustomer()"
+            >
+
+                <span class="role-icon">
+                    🛍️
+                </span>
+
+                <span class="role-text">
+
+                    <strong>
+                        Customer
+                    </strong>
+
+                    <small>
+                        Belanja gadget favoritmu
+                    </small>
+
+                </span>
+
+                <span class="role-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+            <button
+                class="role-card"
+                onclick="openAdmin()"
+            >
+
+                <span class="role-icon">
+                    ⚙️
+                </span>
+
+                <span class="role-text">
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Kelola produk dan pesanan
+                    </small>
+
+                </span>
+
+                <span class="role-arrow">
+                    →
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 GadgetStore
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CUSTOMER PAGE
+===================================================== -->
+
+<section
+    id="customerPage"
+    class="screen customer-page"
+>
+
+    <header class="customer-header">
+
+        <button
+            class="brand-button"
+            onclick="showHome()"
+        >
+
+            <span class="mini-logo">
+                G
+            </span>
+
+            <span>
+
+                <strong>
+                    GadgetStore
+                </strong>
+
+                <small>
+                    Premium Gadget
+                </small>
+
+            </span>
+
+        </button>
+
+
+        <div class="header-actions">
+
+            <button
+                class="icon-button"
+                onclick="openCart()"
+            >
+
+                🛒
+
+                <b
+                    id="cartCount"
+                    class="cart-count"
+                >
+                    0
+                </b>
+
+            </button>
+
+
+            <button
+                class="icon-button"
+                onclick="openProfile()"
+            >
+                👤
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="customer-main">
+
+
+        <!-- HOME -->
+
+        <div
+            id="homeSection"
+            class="customer-section"
+        >
+
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        NEW COLLECTION 2026
+                    </span>
+
+                    <h1>
+                        Upgrade Your
+                        <br>
+                        Digital Life.
+                    </h1>
+
+                    <p>
+                        Temukan smartphone, tablet,
+                        laptop dan gadget pilihan
+                        terbaik untuk kebutuhanmu.
+                    </p>
+
+                    <button
+                        class="primary-button"
+                        onclick="showProducts()"
+                    >
+
+                        Belanja Sekarang
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <div class="hero-device">
+
+                    <div class="hero-photo">
+
+                        <img
+                            src="images/iphone15.jpg"
+                            alt="Gadget"
+                            onerror="imageError(this)"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section class="product-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span>
+                            COLLECTION
+                        </span>
+
+                        <h2>
+                            Produk Pilihan
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="text-button"
+                        onclick="showProducts()"
+                    >
+                        Lihat Semua →
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="homeProducts"
+                    class="product-grid"
+                >
+                </div>
+
+            </section>
+
+
+            <section class="promo-card">
+
+                <div>
+
+                    <span>
+                        GADGETSTORE WALLET
+                    </span>
+
+                    <h2>
+                        Dapatkan kemudahan
+                        pembayaran.
+                    </h2>
+
+                    <p>
+                        Gunakan saldo GadgetStore
+                        untuk checkout lebih cepat.
+                    </p>
+
+                </div>
+
+
+                <span class="promo-icon">
+                    💳
+                </span>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- PRODUCTS -->
+
+        <div
+            id="productsSection"
+            class="customer-section hidden"
+        >
+
+            <div class="page-title">
+
+                <button
+                    class="back-button"
+                    onclick="showHome()"
+                >
+                    ←
+                </button>
+
+                <div>
+
+                    <span>
+                        GADGETSTORE
+                    </span>
+
+                    <h1>
+                        Semua Produk
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="search-wrapper">
+
+                <span>
+                    🔎
+                </span>
+
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Cari gadget..."
+                    oninput="searchProducts()"
+                >
+
+            </div>
+
+
+            <div class="category-filter">
+
+                <button
+                    onclick="filterCategory('all')"
+                >
+                    Semua
+                </button>
+
+                <button
+                    onclick="filterCategory('SMARTPHONE')"
+                >
+                    Smartphone
+                </button>
+
+                <button
+                    onclick="filterCategory('TABLET')"
+                >
+                    Tablet
+                </button>
+
+                <button
+                    onclick="filterCategory('LAPTOP')"
+                >
+                    Laptop
+                </button>
+
+                <button
+                    onclick="filterCategory('AUDIO')"
+                >
+                    Audio
+                </button>
+
+                <button
+                    onclick="filterCategory('CAMERA')"
+                >
+                    Camera
+                </button>
+
+            </div>
+
+
+            <div
+                id="allProducts"
+                class="product-grid"
+            >
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <nav class="bottom-nav">
+
+        <button
+            class="nav-item active"
+            onclick="showHome()"
+        >
+            🏠
+            <span>
+                Home
+            </span>
+        </button>
+
+        <button
+            class="nav-item"
+            onclick="showProducts()"
+        >
+            🛍️
+            <span>
+                Produk
+            </span>
+        </button>
+
+        <button
+            class="nav-item"
+            onclick="showOrders()"
+        >
+            📦
+            <span>
+                Pesanan
+            </span>
+        </button>
+
+        <button
+            class="nav-item"
+            onclick="openProfile()"
+        >
+            👤
+            <span>
+                Profil
+            </span>
+        </button>
+
+    </nav>
+
+</section>
+
+
+
+<!-- =====================================================
+     ORDERS
+===================================================== -->
+
+<section
+    id="ordersPage"
+    class="screen orders-page"
+>
+
+    <header class="page-header">
+
+        <button
+            class="back-button"
+            onclick="backCustomer()"
+        >
+            ←
+        </button>
+
+        <div>
+
+            <span>
+                GADGETSTORE
+            </span>
+
+            <h2>
+                Pesanan Saya
+            </h2>
+
+        </div>
+
+    </header>
+
+
+    <main class="inner-content">
+
+        <div
+            id="customerOrders"
+            class="orders-container"
+        >
+        </div>
+
+    </main>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROFILE
+===================================================== -->
+
+<section
+    id="profilePage"
+    class="screen profile-page"
+>
+
+    <header class="page-header">
+
+        <button
+            class="back-button"
+            onclick="closeProfile()"
+        >
+            ←
+        </button>
+
+        <div>
+
+            <span>
+                GADGETSTORE
+            </span>
+
+            <h2>
+                Profil Saya
+            </h2>
+
+        </div>
+
+    </header>
+
+
+    <main class="profile-content">
+
+        <section class="profile-identity">
+
+            <div class="profile-avatar">
+                👤
+            </div>
+
+            <div>
+
+                <h2 id="profileName">
+                    Customer
+                </h2>
+
+                <span id="profileEmail">
+                    Customer GadgetStore
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <section class="wallet-card">
+
+            <span>
+                GADGETSTORE WALLET
+            </span>
+
+            <small>
+                Saldo kamu
+            </small>
+
+            <strong id="profileBalance">
+                Rp500.000
+            </strong>
+
+            <button
+                onclick="topUp()"
+            >
+                + Top Up Saldo
+            </button>
+
+        </section>
+
+
+        <section class="profile-menu">
+
+            <button
+                onclick="showOrders()"
+            >
+
+                <span>
+                    📦
+                </span>
+
+                <div>
+
+                    <strong>
+                        Pesanan Saya
+                    </strong>
+
+                    <small>
+                        Lihat status pesanan
+                    </small>
+
+                </div>
+
+                <b>
+                    →
+                </b>
+
+            </button>
+
+
+            <button
+                onclick="showToast('Fitur alamat segera tersedia')"
+            >
+
+                <span>
+                    📍
+                </span>
+
+                <div>
+
+                    <strong>
+                        Alamat Pengiriman
+                    </strong>
+
+                    <small>
+                        Kelola alamat pengiriman
+                    </small>
+
+                </div>
+
+                <b>
+                    →
+                </b>
+
+            </button>
+
+
+            <button
+                onclick="showToast('Pusat bantuan segera tersedia')"
+            >
+
+                <span>
+                    ❓
+                </span>
+
+                <div>
+
+                    <strong>
+                        Bantuan
+                    </strong>
+
+                    <small>
+                        Butuh bantuan?
+                    </small>
+
+                </div>
+
+                <b>
+                    →
+                </b>
+
+            </button>
+
+        </section>
+
+
+        <button
+            class="profile-logout"
+            onclick="logoutCustomer()"
+        >
+            Keluar dari GadgetStore
+        </button>
+
+    </main>
+
+</section>
+
+
+
+<!-- =====================================================
+     ADMIN
+===================================================== -->
+
+<section
+    id="adminPage"
+    class="screen admin-page"
+>
+
+    <header class="admin-header">
+
+        <div class="admin-brand">
+
+            <div class="admin-logo">
+                G
+            </div>
+
+            <div>
+
+                <span>
+                    GADGETSTORE ADMIN
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="admin-exit"
+            onclick="logoutAdmin()"
+        >
+            ← Keluar
+        </button>
+
+    </header>
+
+
+    <main class="admin-content">
+
+
+        <section class="admin-stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    💰
+                </div>
+
+                <span>
+                    Total Penjualan
+                </span>
+
+                <strong id="statRevenue">
+                    Rp0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📦
+                </div>
+
+                <span>
+                    Total Pesanan
+                </span>
+
+                <strong id="statOrders">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🚚
+                </div>
+
+                <span>
+                    Perlu Diproses
+                </span>
+
+                <strong id="statProcess">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📱
+                </div>
+
+                <span>
+                    Total Produk
+                </span>
+
+                <strong id="statProducts">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ORDER -->
+
+        <section class="admin-panel">
+
+            <div class="admin-panel-heading">
+
+                <span>
+                    ORDER MANAGEMENT
+                </span>
+
+                <h2>
+                    Pesanan Customer
+                </h2>
+
+            </div>
+
+
+            <div
+                id="adminOrders"
+                class="admin-orders"
+            >
+            </div>
+
+        </section>
+
+
+
+        <!-- PRODUCT -->
+
+        <section class="admin-panel">
+
+            <div class="admin-panel-heading admin-heading-row">
+
+                <div>
+
+                    <span>
+                        PRODUCT MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Produk Toko
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    onclick="openProductEditor()"
+                >
+                    + Tambah Produk
+                </button>
+
+            </div>
+
+
+            <div
+                id="adminProductList"
+                class="admin-product-list"
+            >
+            </div>
+
+        </section>
+
+    </main>
+
+</section>
+
+
+
+<!-- =====================================================
+     CART
+===================================================== -->
+
+<div
+    id="cartModal"
+    class="modal"
+    aria-hidden="true"
+>
+
+    <div class="modal-content">
+
+        <button
+            class="modal-close"
+            onclick="closeCart()"
+        >
+            ×
+        </button>
+
+        <span class="modal-label">
+            SHOPPING CART
+        </span>
+
+        <h2>
+            Keranjang Kamu
+        </h2>
+
+
+        <div
+            id="cartItems"
+            class="cart-items"
+        >
+        </div>
+
+
+        <div class="cart-summary">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cartTotal">
+                Rp0
+            </strong>
+
+        </div>
+
+
+        <button
+            class="checkout-button"
+            onclick="checkout()"
+        >
+            Checkout Sekarang →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     DETAIL / PREVIEW
+===================================================== -->
+
+<div
+    id="detailModal"
+    class="modal"
+    aria-hidden="true"
+>
+
+    <div
+        class="modal-content detail-modal"
+    >
+
+        <button
+            class="modal-close"
+            onclick="closeModal('detailModal')"
+        >
+            ×
+        </button>
+
+
+        <div class="detail-layout">
+
+
+            <div class="detail-media">
+
+                <img
+                    id="detailImage"
+                    src=""
+                    alt="Produk"
+                >
+
+
+                <!-- VIDEO DI BAWAH FOTO -->
+
+                <div class="video-title">
+                    VIDEO PRODUK
+                </div>
+
+
+                <div class="video-wrapper">
+
+                    <video
+                        id="detailVideo"
+                        controls
+                        playsinline
+                        preload="metadata"
+                    >
+
+                        <source
+                            id="detailVideoSource"
+                            src=""
+                            type="video/mp4"
+                        >
+
+                        Browser kamu tidak mendukung video.
+
+                    </video>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="detail-info">
+
+                <span
+                    id="detailCategory"
+                    class="product-category"
+                >
+                </span>
+
+
+                <h2 id="detailName">
+                </h2>
+
+
+                <div
+                    id="detailRating"
+                    class="product-rating"
+                >
+                </div>
+
+
+                <strong
+                    id="detailPrice"
+                    class="detail-price"
+                >
+                </strong>
+
+
+                <p
+                    id="detailDescription"
+                    class="detail-description"
+                >
+                </p>
+
+
+                <div
+                    id="detailStock"
+                    class="detail-stock"
+                >
+                </div>
+
+
+                <div
+                    id="detailSpecs"
+                    class="spec-grid"
+                >
+                </div>
+
+
+                <div class="detail-actions">
+
+                    <button
+                        class="secondary-button"
+                        onclick="closeModal('detailModal')"
+                    >
+                        Tutup
+                    </button>
+
+
+                    <button
+                        id="detailAddButton"
+                        class="primary-button"
+                    >
+                        + Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     LOGIN CUSTOMER
+===================================================== -->
+
+<div
+    id="loginModal"
+    class="modal"
+    aria-hidden="true"
+>
+
+    <div class="modal-content login-modal">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('loginModal')"
+        >
+            ×
+        </button>
+
+
+        <div class="login-icon">
+            👤
+        </div>
+
+
+        <span class="modal-label">
+            CUSTOMER LOGIN
+        </span>
+
+
+        <h2>
+            Login untuk Belanja
+        </h2>
+
+
+        <p class="login-description">
+            Login diperlukan sebelum
+            menambahkan produk atau melakukan
+            pembelian.
+        </p>
+
+
+        <div class="form-group">
+
+            <label>
+                Nama / Email
+            </label>
+
+            <input
+                id="customerLoginName"
+                type="text"
+                placeholder="Nama atau email"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Password
+            </label>
+
+            <input
+                id="customerLoginPassword"
+                type="password"
+                placeholder="Password"
+            >
+
+        </div>
+
+
+        <button
+            class="checkout-button"
+            onclick="loginCustomer()"
+        >
+            Login →
+        </button>
+
+
+        <small class="login-hint">
+            Demo password:
+            <b>123456</b>
+        </small>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADMIN LOGIN
+===================================================== -->
+
+<div
+    id="adminLoginModal"
+    class="modal"
+    aria-hidden="true"
+>
+
+    <div class="modal-content login-modal">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('adminLoginModal')"
+        >
+            ×
+        </button>
+
+
+        <div class="login-icon">
+            ⚙️
+        </div>
+
+
+        <span class="modal-label">
+            ADMIN LOGIN
+        </span>
+
+
+        <h2>
+            Login Administrator
+        </h2>
+
+
+        <div class="form-group">
+
+            <label>
+                Username
+            </label>
+
+            <input
+                id="adminUsername"
+                type="text"
+                placeholder="Username"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Password
+            </label>
+
+            <input
+                id="adminPassword"
+                type="password"
+                placeholder="Password"
+            >
+
+        </div>
+
+
+        <button
+            class="checkout-button"
+            onclick="loginAdmin()"
+        >
+            Masuk Admin →
+        </button>
+
+
+        <small class="login-hint">
+            Demo:
+            <b>admin / admin123</b>
+        </small>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     PAYMENT
+===================================================== -->
+
+<div
+    id="paymentModal"
+    class="modal"
+    aria-hidden="true"
+>
+
+    <div class="modal-content">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('paymentModal')"
+        >
+            ×
+        </button>
+
+        <span class="modal-label">
+            CHECKOUT
+        </span>
+
+        <h2>
+            Pembayaran
+        </h2>
+
+
+        <div class="payment-total">
+
+            <span>
+                Total pembayaran
+            </span>
+
+            <strong id="paymentTotal">
+                Rp0
+            </strong>
+
+        </div>
+
+
+        <div class="payment-grid">
+
+            <button
+                id="pay-gdpay"
+                class="payment-card"
+                onclick="selectPayment('gdpay')"
+            >
+                💳
+                <strong>GDPAY</strong>
+                <small>Saldo GadgetStore</small>
+            </button>
+
+
+            <button
+                id="pay-qris"
+                class="payment-card"
+                onclick="selectPayment('qris')"
+            >
+                ▦
+                <strong>QRIS</strong>
+                <small>Pembayaran QR</small>
+            </button>
+
+
+            <button
+                id="pay-ewallet"
+                class="payment-card"
+                onclick="selectPayment('ewallet')"
+            >
+                📲
+                <strong>E-Wallet</strong>
+                <small>GoPay, DANA, OVO</small>
+            </button>
+
+
+            <button
+                id="pay-bank"
+                class="payment-card"
+                onclick="selectPayment('bank')"
+            >
+                🏦
+                <strong>Bank</strong>
+                <small>Transfer bank</small>
+            </button>
+
+
+            <button
+                id="pay-retail"
+                class="payment-card"
+                onclick="selectPayment('retail')"
+            >
+                🏪
+                <strong>Retail</strong>
+                <small>Alfamart / Indomaret</small>
+            </button>
+
+        </div>
+
+
+        <div
+            id="paymentForm"
+            class="payment-form hidden"
+        >
+        </div>
+
+
+        <button
+            id="confirmPaymentBtn"
+            class="checkout-button hidden"
+            onclick="confirmPayment()"
+        >
+            Konfirmasi Pembayaran →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     TOP UP
+===================================================== -->
+
+<div
+    id="topupModal"
+    class="modal"
+    aria-hidden="true"
+>
+
+    <div class="modal-content">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('topupModal')"
+        >
+            ×
+        </button>
+
+        <span class="modal-label">
+            GADGETSTORE WALLET
+        </span>
+
+        <h2>
+            Top Up Saldo
+        </h2>
+
+
+        <div class="topup-options">
+
+            <button onclick="setTopup(50000)">
+                Rp50.000
+            </button>
+
+            <button onclick="setTopup(100000)">
+                Rp100.000
+            </button>
+
+            <button onclick="setTopup(250000)">
+                Rp250.000
+            </button>
+
+            <button onclick="setTopup(500000)">
+                Rp500.000
+            </button>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Nominal
+            </label>
+
+            <input
+                id="topupAmount"
+                type="number"
+                min="10000"
+                step="1000"
+                placeholder="Masukkan nominal"
+            >
+
+        </div>
+
+
+        <button
+            class="checkout-button"
+            onclick="confirmTopUp()"
+        >
+            Tambah Saldo
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     PRODUCT EDITOR ADMIN
+===================================================== -->
+
+<div
+    id="productEditorModal"
+    class="modal"
+    aria-hidden="true"
+>
+
+    <div class="modal-content admin-editor">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('productEditorModal')"
+        >
+            ×
+        </button>
+
+
+        <span class="modal-label">
+            PRODUCT MANAGEMENT
+        </span>
+
+
+        <h2 id="editorTitle">
+            Tambah Produk
+        </h2>
+
+
+        <input
+            id="editorId"
+            type="hidden"
+        >
+
+
+        <div class="form-group">
+
+            <label>
+                Nama Produk
+            </label>
+
+            <input
+                id="editorName"
+                type="text"
+                placeholder="Nama produk"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Kategori
+            </label>
+
+            <select
+                id="editorCategory"
+            >
+
+                <option value="SMARTPHONE">
+                    Smartphone
+                </option>
+
+                <option value="TABLET">
+                    Tablet
+                </option>
+
+                <option value="LAPTOP">
+                    Laptop
+                </option>
+
+                <option value="AUDIO">
+                    Audio
+                </option>
+
+                <option value="SMARTWATCH">
+                    Smartwatch
+                </option>
+
+                <option value="CAMERA">
+                    Camera
+                </option>
+
+                <option value="ACCESSORIES">
+                    Accessories
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Harga
+            </label>
+
+            <input
+                id="editorPrice"
+                type="number"
+                min="0"
+                placeholder="Harga"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Rating
+            </label>
+
+            <input
+                id="editorRating"
+                type="number"
+                min="0"
+                max="5"
+                step="0.1"
+                value="4.8"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Label Produk
+            </label>
+
+            <input
+                id="editorTag"
+                type="text"
+                placeholder="BEST SELLER"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Lokasi Foto
+            </label>
+
+            <input
+                id="editorImage"
+                type="text"
+                placeholder="images/produk.jpg"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Lokasi Video
+            </label>
+
+            <input
+                id="editorVideo"
+                type="text"
+                placeholder="videos/produk.mp4"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Deskripsi
+            </label>
+
+            <textarea
+                id="editorDescription"
+                rows="4"
+                placeholder="Deskripsi produk"
+            ></textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Spesifikasi
+            </label>
+
+            <textarea
+                id="editorSpecs"
+                rows="5"
+                placeholder="Layar: 6.7 inch&#10;RAM: 12 GB&#10;Storage: 256 GB"
+            ></textarea>
+
+        </div>
+
+
+        <button
+            class="checkout-button"
+            onclick="saveProductEditor()"
+        >
+            Simpan Produk
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    id="toast"
+    class="toast"
+></div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
